@@ -6,6 +6,7 @@
   <title>English Reading Made Easy</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
+    
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --sun:   #D4A843;
@@ -47,7 +48,7 @@
     .hero::before { content:''; position:absolute; border-radius:50%; width:420px; height:420px; background:var(--grape); top:-140px; right:-120px; opacity:.12; pointer-events:none; }
     .hero::after  { content:''; position:absolute; border-radius:50%; width:300px; height:300px; background:var(--leaf);  bottom:-100px; left:-80px;   opacity:.12; pointer-events:none; }
     .hero-inner { display:grid; grid-template-columns:1fr 1fr; gap:3rem; max-width:1100px; align-items:center; z-index:1; }
-    .hero-text h1 { font-family:var(--font-display); font-size:clamp(2rem,5vw,3.8rem); font-weight:800; line-height:1.1; }
+    .hero-text h1 { font-family:var(--font-display); font-size:clamp(2.4rem,5vw,3.8rem); font-weight:800; line-height:1.1; }
     .hero-text h1 em { font-style:normal; background:linear-gradient(90deg,var(--coral),var(--grape)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
     .hero-text p { margin-top:1.2rem; font-size:1.1rem; line-height:1.7; color:#444; }
     .btn-group { display:flex; gap:1rem; margin-top:2rem; flex-wrap:wrap; }
@@ -186,11 +187,63 @@
     .footer-logo span { color:var(--sky); }
 
     /* RESPONSIVE */
+    /* ── MOBILE BASE ── */
+    * { word-break: break-word; }
+
     @media (max-width:700px) {
-      .hero-inner { grid-template-columns:1fr; text-align:center; }
-      .btn-group { justify-content:center; }
+      /* Nav */
+      nav { padding: .8rem 1.2rem; }
       nav ul { display:none; }
-      .footer-bottom { justify-content:center; text-align:center; }
+
+      /* Hero */
+      .hero { padding: 2.5rem 1.2rem 2rem; min-height: unset; }
+      .hero-inner { grid-template-columns:1fr; text-align:center; gap: 1.5rem; }
+      .hero-text h1 { font-size: 1.6rem; line-height: 1.2; }
+      .hero-text p {
+        font-size: .88rem;
+        line-height: 1.6;
+        padding: 0;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        max-height: 180px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        border-left: 3px solid var(--coral);
+        padding-left: .8rem;
+        padding-right: .4rem;
+        background: rgba(255,255,255,0.5);
+        border-radius: 0 6px 6px 0;
+      }
+      .btn-group { justify-content:center; flex-wrap: wrap; gap: .7rem; }
+      .btn { padding: .65rem 1.4rem; font-size: .9rem; }
+
+      /* Book covers */
+      .covers-row { gap: .8rem; }
+      .cover-img { width: 130px !important; }
+
+      /* Sections */
+      .about { padding: 3rem 1.2rem; }
+      .about h2 { font-size: 1.6rem; }
+      .about p { font-size: .9rem; }
+
+      .features { padding: 3rem 1.2rem; }
+      .features h2 { font-size: 1.6rem; margin-bottom: 1.5rem; }
+
+      .preview { padding: 3rem 1.2rem; }
+      .preview h2 { font-size: 1.6rem; }
+
+      .testimonials { padding: 3rem 1.2rem; }
+      .testimonials h2 { font-size: 1.6rem; }
+
+      .cta-banner { padding: 2.5rem 1.2rem; }
+      .cta-banner h2 { font-size: 1.6rem; }
+
+      .footer-contact { padding: 3rem 1.2rem; }
+      .footer-contact h3 { font-size: 1.4rem; }
+      .contact-btn { padding: .75rem 1.4rem; font-size: .9rem; }
+
+      .footer-bottom { justify-content:center; text-align:center; padding: 1rem 1.2rem; }
     }
 
     /* ── DUAL BOOK COVERS ── */
@@ -235,9 +288,9 @@
       padding: .25rem .75rem;
       border-radius: 6px;
       box-shadow: 0 2px 8px rgba(0,0,0,.08);
-      
     }
     .cover-item:last-child .cover-badge { color: var(--sky); }
+   
   </style>
 </head>
 <body>
@@ -259,7 +312,7 @@
       <div class="hero-text">
         <div class="section-tag">📘 New Edition</div>
         <h1>Empowering Beginners, <em>Through English Literacy For a Brighter Future</em></h1>
-        <p>Excellent foundation in the English literacy is a powerful tool that opens doors to education, employment and communication in today's world. For beginners learning English can feel challenging but with the right tools and guidance it becomes an exciting journey towards a brighter future. Reading Made Easy series is a highly recommended supplementary English workbook designed to help beginners start reading confidently and independently in the shortest possible time. Built on proven teaching methods and refined by experienced education professionals, it delivers a structured, engaging, and effective learning experience that nurtures confidence and a lasting love for the English language.</p>
+        <p>Excellent foundation in the English literacy is a powerful tool that opens doors to education, employment and communication in today's world. For beginners, learning English can feel challenging but with the right tools and guidance it becomes an exciting journey towards a brighter future. Reading Made Easy series is a highly recommended supplementary English workbook designed to help beginners start reading confidently and independently in the shortest possible time. Built on proven teaching methods and refined by experienced education professionals, it delivers a structured, engaging, and effective learning experience that nurtures confidence and a lasting love for the English language.</p>
         <div class="btn-group">
           <a href="#contact" class="btn btn-primary">🛒 Order Now</a>
           <a href="#preview" class="btn btn-secondary">📋 See Inside</a>

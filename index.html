@@ -29,8 +29,7 @@
       background: var(--white);
       box-shadow: 0 2px 0 #D4A843;
     }
-        .nav-logo { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: var(--coral); display: flex;}
-
+    .nav-logo { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: var(--coral); display: flex;gap: 7px;}
     .nav-logo span { color: var(--sky); }
     nav ul { list-style: none; display: flex; gap: 2rem; }
     nav ul a { text-decoration: none; font-weight: 700; font-size: .95rem; color: var(--ink); transition: color .2s; }
@@ -45,13 +44,12 @@
       padding: 5rem 2.5rem 4rem;
       position: relative; overflow: hidden;
     }
-    .hero::before { content:''; position:absolute; border-radius:50%; width:420px; height:420px; background:var(--grape); top:-140px; right:-120px; opacity:.12; pointer-events:none; }
-        .hero::after  { content:''; position:absolute;bottom:-100px; left:-80px;   opacity:.12; pointer-events:none; }
 
+    .hero::after  { content:''; position:absolute;bottom:-100px; left:-80px;   opacity:.12; pointer-events:none; }
     .hero-inner { display:grid; grid-template-columns:1fr 1fr; gap:3rem; max-width:1100px; align-items:center; z-index:1; }
-    .hero-text h1 { font-family:var(--font-display); font-size:clamp(2.4rem,5vw,3.8rem); font-weight:800; line-height:1.1; }
+    .hero-text h1 { font-family:var(--font-display); font-size:clamp(2.4rem,5vw,3.8rem); font-weight:800; line-height:1.1; color: black;}
     .hero-text h1 em { font-style:normal; color: black; }
-    .hero-text p { margin-top:1.2rem; font-size:1.1rem; line-height:1.7; color:#444; }
+    .hero-text p { margin-top:1.2rem; font-size:1.1rem; line-height:1.7; color:black; }
     .btn-group { display:flex; gap:1rem; margin-top:2rem; flex-wrap:wrap; }
     .btn { display:inline-block; padding:.75rem 2rem; border-radius:8px; font-family:var(--font-display); font-size:1rem; font-weight:700; text-decoration:none; transition:transform .2s,box-shadow .2s; }
     .btn:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,.15); }
@@ -84,7 +82,7 @@
     .features { padding:5rem 2.5rem; background: #bcbfc6; }
     .features h2 { font-family:var(--font-display); font-size:2.2rem; font-weight:800; text-align:center; margin-bottom:3rem; }
     .features-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:2rem; max-width:1100px; margin:0 auto; }
-    .feature-card { background:#fff; border-radius:12px; padding:2rem 1.5rem; text-align:center; box-shadow:0 4px 20px rgba(0,0,0,0.5); transition:transform .25s; }
+    .feature-card { background:#fff; border-radius:12px; padding:2rem 1.5rem; text-align:center; box-shadow:0 4px 20px rgba(0,0,0,.5); transition:transform .25s; }
     .feature-card:hover { transform:translateY(-6px); }
     .feature-card .emoji { font-size:2.5rem; margin-bottom:.8rem; }
     .feature-card h3 { font-family:var(--font-display); font-weight:700; font-size:1.15rem; margin-bottom:.5rem; }
@@ -435,7 +433,7 @@
 }
 
 .hero-text p {
-  color: black;
+  color:black;
   text-shadow: 0 2px 10px rgba(0,0,0,0.45);
 }
 
@@ -453,7 +451,7 @@
 
   .hero-text h1,
   .hero-text p {
-    color: black;
+    color: #111;
     text-shadow: none;
   }
 }
@@ -487,8 +485,8 @@
 
   /* paragraph sits on clean background */
   .hero-text p {
-    background: rgba(255,255,255,0.75);
-    backdrop-filter: blur(6px);
+  
+    color: black;
     padding: 1rem;
     border-radius: 12px;
   }
@@ -500,7 +498,7 @@
 
   <!-- ── NAV ── -->
   <nav>
-    <div class="nav-logo">English Reading<span> Made Easy</span> <img src="logo.png"></div>
+    <div class="nav-logo">English Reading<span>  Made Easy</span> By<img src="logo.png"></div>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#features">Features</a></li>
@@ -514,7 +512,7 @@
       <div class="hero-text">
         <div class="section-tag">📘 New Edition</div>
         <h1>Empowering Beginners, <em>Through English Literacy For a Brighter Future</em></h1>
-        <p>Quality foundation in English literacy is a powerful tool that opens doors to endless opportunities. For beginners, learning English can feel challenging, but with the right tools and guidance it becomes an exciting journey towards a brighter future. <b>"English Reading Made Easy"</b> series is a highly recommended supplementary English workbook designed to help beginners start reading confidently and independently in the shortest possible time. Built on proven teaching methods and refined by experienced education professionals, it delivers a structured, engaging, and effective learning experience that nurtures confidence and a lasting love for the English language.</p>
+        <p>Quality foundation in English literacy is a powerful tool that opens doors to endless opportunities. For beginners, learning English can feel challenging, but with the right tools and guidance it becomes an exciting journey towards a brighter future. <b>"English Reading Made Easy"</b>b></b> series is a highly recommended supplementary English workbook designed to help beginners start reading confidently and independently in the shortest possible time. Built on proven teaching methods and refined by experienced education professionals, it delivers a structured, engaging, and effective learning experience that nurtures confidence and a lasting love for the English language.</p>
         <div class="btn-group">
           <a href="#contact" class="btn btn-primary">🛒 Order Now</a>
           <a href="#preview" class="btn btn-secondary">📋 See Inside</a>
@@ -713,8 +711,8 @@
       </div>
 
     </div>
-  </footer>
-</body>
-</html>
 
  
+</footer>
+</body>
+</html>
